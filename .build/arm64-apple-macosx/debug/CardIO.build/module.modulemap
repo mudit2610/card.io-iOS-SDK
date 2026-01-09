@@ -1,0 +1,4 @@
+module CardIO {
+    umbrella header "/Users/mudit.goyal/card.io-iOS-SDK/Sources/CardIO/CardIO.h"
+    export *
+}
