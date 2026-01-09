@@ -3,28 +3,28 @@ client:
   file-system: device-agnostic
 tools: {}
 targets:
+  "CardIO-arm64-apple-macosx15.0-debug.module": ["<CardIO-arm64-apple-macosx15.0-debug.module>"]
   "PackageStructure": ["<PackageStructure>"]
-  "card.io-iOS-SDK-arm64-apple-macosx15.0-debug.module": ["<card.io-iOS-SDK-arm64-apple-macosx15.0-debug.module>"]
-  "main": ["<card.io-iOS-SDK-arm64-apple-macosx15.0-debug.module>"]
-  "test": ["<card.io-iOS-SDK-arm64-apple-macosx15.0-debug.module>"]
+  "main": ["<CardIO-arm64-apple-macosx15.0-debug.module>"]
+  "test": ["<CardIO-arm64-apple-macosx15.0-debug.module>"]
 default: "main"
 nodes:
   "/Users/mudit.goyal/card.io-iOS-SDK/Sources/CardIO/":
     is-directory-structure: true
     content-exclusion-patterns: [".git",".build"]
 commands:
-  "/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/card_io_iOS_SDK.build/CardIO.m.o":
+  "/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/CardIO.build/CardIO.m.o":
     tool: clang
     inputs: ["/Users/mudit.goyal/card.io-iOS-SDK/Sources/CardIO/CardIO.m"]
-    outputs: ["/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/card_io_iOS_SDK.build/CardIO.m.o"]
-    description: "Compiling card.io-iOS-SDK CardIO.m"
-    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang","-fobjc-arc","-target","arm64-apple-macosx10.13","-O0","-DSWIFT_PACKAGE=1","-DDEBUG=1","-fblocks","-index-store-path","/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/index/store","-fmodules","-fmodule-name=card_io_iOS_SDK","-fmodules-cache-path=/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/ModuleCache","-I","/Users/mudit.goyal/card.io-iOS-SDK/Sources/CardIO","-isysroot","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-fPIC","-g","-MD","-MT","dependencies","-MF","/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/card_io_iOS_SDK.build/CardIO.m.d","-c","/Users/mudit.goyal/card.io-iOS-SDK/Sources/CardIO/CardIO.m","-o","/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/card_io_iOS_SDK.build/CardIO.m.o"]
-    deps: "/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/card_io_iOS_SDK.build/CardIO.m.d"
+    outputs: ["/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/CardIO.build/CardIO.m.o"]
+    description: "Compiling CardIO CardIO.m"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang","-fobjc-arc","-target","arm64-apple-macosx10.13","-O0","-DSWIFT_PACKAGE=1","-DDEBUG=1","-fblocks","-index-store-path","/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/index/store","-fmodules","-fmodule-name=CardIO","-fmodules-cache-path=/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/ModuleCache","-I","/Users/mudit.goyal/card.io-iOS-SDK/Sources/CardIO/include","-I/Users/mudit.goyal/card.io-iOS-SDK/Sources/CardIO/include","-isysroot","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-fPIC","-g","-MD","-MT","dependencies","-MF","/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/CardIO.build/CardIO.m.d","-c","/Users/mudit.goyal/card.io-iOS-SDK/Sources/CardIO/CardIO.m","-o","/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/CardIO.build/CardIO.m.o"]
+    deps: "/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/CardIO.build/CardIO.m.d"
 
-  "<card.io-iOS-SDK-arm64-apple-macosx15.0-debug.module>":
+  "<CardIO-arm64-apple-macosx15.0-debug.module>":
     tool: phony
-    inputs: ["/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/card_io_iOS_SDK.build/CardIO.m.o"]
-    outputs: ["<card.io-iOS-SDK-arm64-apple-macosx15.0-debug.module>"]
+    inputs: ["/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/CardIO.build/CardIO.m.o"]
+    outputs: ["<CardIO-arm64-apple-macosx15.0-debug.module>"]
 
   "PackageStructure":
     tool: package-structure-tool
