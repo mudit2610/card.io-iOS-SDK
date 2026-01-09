@@ -1,0 +1,4 @@
+module card_io_iOS_SDK {
+    umbrella "/Users/mudit.goyal/card.io-iOS-SDK/Sources/CardIO"
+    export *
+}
