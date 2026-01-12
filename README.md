@@ -339,3 +339,10 @@ Include a method to cancel card scanning:
 * For your users' security, [obscure your app's cached screenshots](https://viaforensics.com/resources/reports/best-practices-ios-android-secure-mobile-development/ios-avoid-cached-application-snapshots/).  
 **Note:** By default, a `CardIOPaymentViewController` automatically blurs its own screens when the app is backgrounded. A `CardIOView` does not do any automatic blurring.
 * The first time that you create either a `CardIOPaymentViewController` or a `CardIOView`, the card.io SDK must load resources, which can result in a noticeable delay. To avoid this delay you may optionally call `[CardIOUtilities preloadCardIO]` in advance, so that this resource loading occurs in advance on a background thread.
+
+**Notes for SPM implementation**
+* lipo "libopencv_imgproc.a" -thin arm64 -output "Frameworks/libopencv_imgproc.a"
+* xcodebuild -create-xcframework -library "Frameworks/libopencv_imgproc.a" -headers "CardIO.h" -output "Frameworks/libopencv_imgproc.xcframework"
+
+
+* xcodebuild -create-xcframework -library "Frameworks/libCardIO86.a" -library "Frameworks/libCardIO64.a" -headers "CardIO.h" -output "Frameworks/libCardIO.xcframework"
