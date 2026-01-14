@@ -16,7 +16,6 @@ let package = Package(
         .target(
             name: "CardIO",
             path: "CardIO",
-            exclude: ["../SampleApp", "../SampleApp-Swift"],
             publicHeadersPath: ".",
             linkerSettings: [
               .linkedLibrary("c++")
