@@ -9,16 +9,25 @@ targets:
   "test": ["<CardIO-arm64-apple-macosx15.0-debug.module>"]
 default: "main"
 nodes:
-  "/Users/mudit.goyal/card.io-iOS-SDK/Sources/CardIO/":
+  "/Users/mudit.goyal/card.io-iOS-SDK/CardIO/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/mudit.goyal/card.io-iOS-SDK/Frameworks/libCardIO.xcframework/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/mudit.goyal/card.io-iOS-SDK/Frameworks/libopencv_core.xcframework/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/mudit.goyal/card.io-iOS-SDK/Frameworks/libopencv_imgproc.xcframework/":
     is-directory-structure: true
     content-exclusion-patterns: [".git",".build"]
 commands:
   "/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/CardIO.build/CardIO.m.o":
     tool: clang
-    inputs: ["/Users/mudit.goyal/card.io-iOS-SDK/Sources/CardIO/CardIO.m"]
+    inputs: ["/Users/mudit.goyal/card.io-iOS-SDK/CardIO/CardIO.m"]
     outputs: ["/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/CardIO.build/CardIO.m.o"]
     description: "Compiling CardIO CardIO.m"
-    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang","-fobjc-arc","-target","arm64-apple-macosx10.13","-O0","-DSWIFT_PACKAGE=1","-DDEBUG=1","-fblocks","-index-store-path","/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/index/store","-fmodules","-fmodule-name=CardIO","-fmodules-cache-path=/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/ModuleCache","-I","/Users/mudit.goyal/card.io-iOS-SDK/Sources/CardIO/include","-I/Users/mudit.goyal/card.io-iOS-SDK/Sources/CardIO/include","-isysroot","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-fPIC","-g","-MD","-MT","dependencies","-MF","/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/CardIO.build/CardIO.m.d","-c","/Users/mudit.goyal/card.io-iOS-SDK/Sources/CardIO/CardIO.m","-o","/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/CardIO.build/CardIO.m.o"]
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang","-fobjc-arc","-target","arm64-apple-macosx10.13","-O0","-DSWIFT_PACKAGE=1","-DDEBUG=1","-fblocks","-index-store-path","/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/index/store","-fmodules","-fmodule-name=CardIO","-fmodules-cache-path=/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/ModuleCache","-I","/Users/mudit.goyal/card.io-iOS-SDK/CardIO","-isysroot","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-fPIC","-g","-MD","-MT","dependencies","-MF","/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/CardIO.build/CardIO.m.d","-c","/Users/mudit.goyal/card.io-iOS-SDK/CardIO/CardIO.m","-o","/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/CardIO.build/CardIO.m.o"]
     deps: "/Users/mudit.goyal/card.io-iOS-SDK/.build/arm64-apple-macosx/debug/CardIO.build/CardIO.m.d"
 
   "<CardIO-arm64-apple-macosx15.0-debug.module>":
@@ -28,7 +37,7 @@ commands:
 
   "PackageStructure":
     tool: package-structure-tool
-    inputs: ["/Users/mudit.goyal/card.io-iOS-SDK/Sources/CardIO/","/Users/mudit.goyal/card.io-iOS-SDK/Package.swift","/Users/mudit.goyal/card.io-iOS-SDK/Package.resolved"]
+    inputs: ["/Users/mudit.goyal/card.io-iOS-SDK/CardIO/","/Users/mudit.goyal/card.io-iOS-SDK/Frameworks/libCardIO.xcframework/","/Users/mudit.goyal/card.io-iOS-SDK/Frameworks/libopencv_core.xcframework/","/Users/mudit.goyal/card.io-iOS-SDK/Frameworks/libopencv_imgproc.xcframework/","/Users/mudit.goyal/card.io-iOS-SDK/Package.swift","/Users/mudit.goyal/card.io-iOS-SDK/Package.resolved"]
     outputs: ["<PackageStructure>"]
     description: "Planning build"
     allow-missing-inputs: true

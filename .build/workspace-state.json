@@ -1,7 +1,48 @@
 {
   "object" : {
     "artifacts" : [
-
+      {
+        "kind" : "xcframework",
+        "packageRef" : {
+          "identity" : "card.io-ios-sdk",
+          "kind" : "root",
+          "location" : "/Users/mudit.goyal/card.io-iOS-SDK",
+          "name" : "card.io-iOS-SDK"
+        },
+        "path" : "/Users/mudit.goyal/card.io-iOS-SDK/Frameworks/libopencv_core.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "libopencv_core"
+      },
+      {
+        "kind" : "xcframework",
+        "packageRef" : {
+          "identity" : "card.io-ios-sdk",
+          "kind" : "root",
+          "location" : "/Users/mudit.goyal/card.io-iOS-SDK",
+          "name" : "card.io-iOS-SDK"
+        },
+        "path" : "/Users/mudit.goyal/card.io-iOS-SDK/Frameworks/libCardIO.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "libCardIO"
+      },
+      {
+        "kind" : "xcframework",
+        "packageRef" : {
+          "identity" : "card.io-ios-sdk",
+          "kind" : "root",
+          "location" : "/Users/mudit.goyal/card.io-iOS-SDK",
+          "name" : "card.io-iOS-SDK"
+        },
+        "path" : "/Users/mudit.goyal/card.io-iOS-SDK/Frameworks/libopencv_imgproc.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "libopencv_imgproc"
+      }
     ],
     "dependencies" : [
 
